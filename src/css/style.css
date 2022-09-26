@@ -1,0 +1,25 @@
+body {
+	background-color: #292d3f;
+	color: #999;
+}
+
+.widget {
+	background-color: #e8e8e8;
+	border: 1px solid #fff;
+	padding: 20px;
+	max-width: 400px;
+}
+
+.card img {
+	width: 50px;
+}
+
+form {
+	margin-top: 1rem;
+}
+
+form input {
+	height: 30px;
+	width: 230px;
+	font-size: 20px;
+}
