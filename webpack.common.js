@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -8,6 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: 'auto',
+    clean: true,
   },
   module: {
     rules: [
@@ -53,6 +55,10 @@ module.exports = {
           filename: '[name][ext][query]',
         },
       },
+      {
+        test: /\.txt/,
+        type: 'asset/source',
+      },
     ],
   },
   plugins: [
@@ -63,6 +69,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/license.txt', to: '' },
+      ],
     }),
     new CleanWebpackPlugin(),
   ],
