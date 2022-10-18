@@ -17,7 +17,6 @@ module.exports = merge(common, {
     },
     watchFiles: ['src/**/*.html'],
     open: true,
-    hot: true,
     compress: true,
     port: 9000,
   },
