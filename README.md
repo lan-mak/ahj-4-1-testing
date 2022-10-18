@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/80ut85bwsam5om7l?svg=true)](https://ci.appveyor.com/project/lan-mak/ahj-4-1-testing)
+
 Правила сдачи задания:
 
 1. **Важно**: в рамках этого ДЗ можно использовать любой менеджер пакетов
