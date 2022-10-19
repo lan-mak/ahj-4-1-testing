@@ -9,7 +9,7 @@
     "e2e": "jest --testPathPattern=./e2e/ --runInBand",
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
-    "test": "jest --coverage",
+    "test": "jest --testPathPattern=./src/ --coverage",
     "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lint && npm run test\""
   },
   "repository": {
